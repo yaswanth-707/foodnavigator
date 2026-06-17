@@ -34,9 +34,6 @@ def home():
     if search_query in food_mapping:
      search_query = food_mapping[search_query]
 
-    budget = request.args.get('budget', '')
-    print("Budget:", budget)
-
     conn = get_db_connection()
 
     query = "SELECT * FROM food_centers WHERE 1=1"
@@ -58,12 +55,6 @@ def home():
             f'%{search_query}%',
             f'%{search_query}%'
         ])
-
-    if budget:
-
-        query += " AND average_price <= ?"
-
-        params.append(int(budget))
 
     foods = conn.execute(query, params).fetchall()
 
