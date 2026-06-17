@@ -7,7 +7,6 @@ def get_db_connection():
     conn = sqlite3.connect("database.db")
     conn.row_factory = sqlite3.Row
     return conn
-
 @app.route('/')
 def home():
 
@@ -19,8 +18,9 @@ def home():
     "vada": "tiffin",
     "poori": "tiffin",
     "upma": "tiffin",
-
-    "biryani": "lunch",
+        
+    "chicken": "lunch",
+    "biryani" :"lunch",
     "meals": "lunch",
     "rice": "lunch",
 
@@ -65,6 +65,5 @@ def home():
         foods=foods,
         search_query=search_query
     )
-
 if __name__ == '__main__':
     app.run(debug=True)
