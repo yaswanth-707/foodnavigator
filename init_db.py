@@ -13,7 +13,9 @@ CREATE TABLE IF NOT EXISTS food_centers (
     food_type TEXT,
     average_price INTEGER,
     opening_time TEXT,
-    closing_time TEXT
+    closing_time TEXT,
+    shop_image TEXT,
+     menu_image TEXT                     
 )
 """)
 
