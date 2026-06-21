@@ -59,7 +59,8 @@
                 <div class="collapse" id="details{{ loop.index }}">
                     <div class="card-footer bg-white border-top-0">
                         <h6>Quick Info:</h6>
-                        <p>Food Type: {{ food['opening_'] }}</p>
+                        <p>Opening time: {{ food['opening_time'] }}</p>
+                        <p>Closing time: {{ food['closing_time'] }}</p>
                         <a href="https://www.google.com/maps?q={{ food['latitude'] }},{{ food['longitude'] }}" 
                            target="_blank" class="btn btn-sm btn-outline-primary w-100">
                             Get Directions
